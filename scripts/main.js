@@ -72,3 +72,49 @@ const departments = {
 }
 
 console.log(departments);
+// ------- opdracht 1 -----------
+
+//Opdracht 1a:
+console.log("De afdeling Sales heeft ["+ departments.sales.numberOfEmployees +"] medewerkers");
+
+
+//Opdracht 1b:
+console.log("Marketing is eenleuke afdeling om te werken. " + departments.marketing.description);
+
+
+//opdracht 1c:
+console.log("De afdeling Customer Service heeft " + departments["customer-service"].numberOfEmployees + " medewerkers");
+
+
+//Opdracht 1d:
+console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. " + departments.sales.jobs[1].description);
+
+
+
+// ------- opdracht 2 -----------
+//
+// const userInput = prompt('Hoi! Hoe heet je?');
+// console.log(userInput);
+// const userInput = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
+// // prompt(`Je koos[${userInput}]. ${departments.userInput.description}`);
+//
+// switch(userInput) {
+//     case 'marketing':
+//         console.log("Je koos " + userInput + ". " + departments.marketing.description);
+//         break;
+//     case 'sales':
+//         console.log("Je koos " + userInput + ". " + departments.sales.description);
+//         break;
+//     case 'customer-service':
+//         console.log("Je koos " + userInput + ". " + departments['customer-service'].description);
+//         break;
+//     default:
+//         console.error("Ongeldige keuze. Porbeer het opnieuw door de pagina te verversen.");
+//         break;
+// }
+
+// console.log("Je koos marketing. Over welke functie wil je meer weten? voer" +
+//     "0: [functietitel marketing 0]," +
+//     "1: [functietitel marketing 1]," +
+//     "2: [functietitel marketing 2]," +
+//     "3: [functietitel marketing 3]")
