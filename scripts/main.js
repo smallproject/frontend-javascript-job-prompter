@@ -95,42 +95,67 @@ console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. "
 //
 // const userInput = prompt('Hoi! Hoe heet je?');
 // console.log(userInput);
-// const userInput = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
+const departmentUserInput = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
 // // prompt(`Je koos[${userInput}]. ${departments.userInput.description}`);
 //
-// switch(userInput) {
-//     case 'marketing':
-//         console.log("Je koos " + userInput + ". " + departments.marketing.description);
-//         break;
-//     case 'sales':
-//         console.log("Je koos " + userInput + ". " + departments.sales.description);
-//         break;
-//     case 'customer-service':
-//         console.log("Je koos " + userInput + ". " + departments['customer-service'].description);
+switch(departmentUserInput) {
+    case 'marketing':
+        console.log("Je koos " + departmentUserInput + ". " + departments.marketing.description);
+        break;
+    case 'sales':
+        console.log("Je koos " + departmentUserInput + ". " + departments.sales.description);
+        break;
+    case 'customer-service':
+        console.log("Je koos " + departmentUserInput + ". " + departments['customer-service'].description);
+        break;
+    default:
+        console.error("Ongeldige keuze. Porbeer het opnieuw door de pagina te verversen.");
+        break;
+}
+
+// ------- opdracht 3 -----------
+// console.log("Je koos marketing. Over welke functie wil je meer weten? voer " +
+//     "0: ["+ departments.marketing.jobs[0].title +"]," +
+//     "1: ["+ departments.marketing.jobs[1].title  +"]," +
+//     "2: ["+ departments.marketing.jobs[2].title  +"]," +
+//     "3: ["+ departments.marketing.jobs[3].title  +"]");
+//
+// const userInput2 = prompt();
+//
+// switch (userInput2) {
+//     case "0":
+//     case "1":
+//     case "2":
+//     case "3":
+//         console.log("Je koos [" + departments.marketing.jobs[userInput2].title +"] Een uitdagende rol! "
+//             + departments.marketing.jobs[userInput2].description);
 //         break;
 //     default:
-//         console.error("Ongeldige keuze. Porbeer het opnieuw door de pagina te verversen.");
+//         console.log("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 //         break;
 // }
 
-// ------- opdracht 3 -----------
-console.log("Je koos marketing. Over welke functie wil je meer weten? voer " +
-    "0: ["+ departments.marketing.jobs[0].title +"]," +
-    "1: ["+ departments.marketing.jobs[1].title  +"]," +
-    "2: ["+ departments.marketing.jobs[2].title  +"]," +
-    "3: ["+ departments.marketing.jobs[3].title  +"]");
 
-const userInput2 = prompt();
+// ------- opdracht 4 -----------
+//opdracht 4a
 
-switch (userInput2) {
-    case "0":
-    case "1":
-    case "2":
-    case "3":
-        console.log("Je koos [" + departments.marketing.jobs[userInput2].title +"] Een uitdagende rol! "
-            + departments.marketing.jobs[userInput2].description);
+
+//opdracht 4b
+const jobUserInput = prompt("Je koos ["+ departmentUserInput +"]. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. " +
+    "[0: " +departments[departmentUserInput].jobs[0].title+ " 0], " +
+    "[1: " +departments[departmentUserInput].jobs[1].title+ " 1], " +
+    "[2: " +departments[departmentUserInput].jobs[2].title+ " 2], " +
+    "[3: " +departments[departmentUserInput].jobs[3].title+ " 3], " +
+    "");
+
+//opdracht 4c
+switch (jobUserInput) {
+    case '0':
+    case '1':
+    case '2':
+    case '3':
+        console.log('Je koos ' + departments[departmentUserInput].jobs[jobUserInput].title + '. Een uitdagende rol! ' + departments[departmentUserInput].jobs[jobUserInput].description);
         break;
     default:
-        console.log("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
-        break;
+        console.error('Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
 }
