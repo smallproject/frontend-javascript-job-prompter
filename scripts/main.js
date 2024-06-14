@@ -113,8 +113,24 @@ console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. "
 //         break;
 // }
 
-// console.log("Je koos marketing. Over welke functie wil je meer weten? voer" +
-//     "0: [functietitel marketing 0]," +
-//     "1: [functietitel marketing 1]," +
-//     "2: [functietitel marketing 2]," +
-//     "3: [functietitel marketing 3]")
+// ------- opdracht 3 -----------
+console.log("Je koos marketing. Over welke functie wil je meer weten? voer " +
+    "0: ["+ departments.marketing.jobs[0].title +"]," +
+    "1: ["+ departments.marketing.jobs[1].title  +"]," +
+    "2: ["+ departments.marketing.jobs[2].title  +"]," +
+    "3: ["+ departments.marketing.jobs[3].title  +"]");
+
+const userInput2 = prompt();
+
+switch (userInput2) {
+    case "0":
+    case "1":
+    case "2":
+    case "3":
+        console.log("Je koos [" + departments.marketing.jobs[userInput2].title +"] Een uitdagende rol! "
+            + departments.marketing.jobs[userInput2].description);
+        break;
+    default:
+        console.log("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+        break;
+}
